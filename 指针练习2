@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+	int i;
+	char* arr[] = { "january","february","march","april","may","june","july","august","september","october","november" };
+	scanf("%d",&i);
+	if (i >= 1 && i <= 12)
+	{
+		printf("%s\n", arr[i - 1]);
+	}
+	else
+	{
+		printf("输入错误\n");
+	}
+	return 0;
+}
