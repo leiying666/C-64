@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+typedef struct student
+{
+	char name[10];
+	int a;
+	int b;
+	int c;
+}s;
+void Pjf(s p1)
+{
+	printf("%s:%d\n", p1.name, (p1.a + p1.b + p1.c) / 3);
+}
+void Bjg(s p)
+{
+	int c = 0;
+	if (p.a < 60)
+	{
+		c++;
+	}
+	if (p.b < 60)
+	{
+		c++;
+	}
+	if (p.c < 60)
+	{
+		c++;
+	}
+	printf("%s:%d\n", p.name, c);
+}
+int main()
+{
+	s p1 = { "lihua",40,100,60 };
+	s p2 = { "xiaoli",50,80,90 };
+	s p3 = { "xiaozhang",60,70,80 };
+	Pjf(p1);
+	Pjf(p2);
+	Pjf(p3);
+	Bjg(p1);
+	Bjg(p2);
+	Bjg(p3);
+	return 0;
+}
